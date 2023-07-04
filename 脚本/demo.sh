@@ -8,3 +8,5 @@ esle
   touch index.html css/style.css js/index.js
   exit 0
 f1
+
+//这是Base Script
