@@ -43,3 +43,17 @@
 2. http-server 
 3. 以上就可以开启一个服务器
 4. http-server -c -1 :不使用缓存开启服务器
+
+### form
+
+1. form表单中如果没有提交按钮，就无法提交表单
+2. 一般用来发post请求
+3. 中文 -》 utf8  对应的英文
+4. form不支持put方法，只支持get和post
+5. get会默认将参数放在查询参数上
+6. form标签也有target属性，等同于a标签的target属性
+
+### input 
+
+1. `<input type="submit">提交</input>`:form表单的提交按钮
+2. `<input type="button">按钮</input>`: 普通按钮
