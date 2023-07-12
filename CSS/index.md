@@ -23,3 +23,7 @@
 2. style标签
 3. link链接`<link rel="stylesheet href="./index.css />`
 4. 在css中引入另一个css`@import url('./b.css)`
+
+### 知识点
+
+1. color是可以继承的
