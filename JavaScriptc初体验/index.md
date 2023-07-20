@@ -7,3 +7,6 @@
 5. 生成文本内容：`div.textContent = "你好"`
 6. css转换成大写：`text-transform: uppercase`
 7. 内联元素居中：`text-align: center`
+8. 监听鼠标事件：`div.onkeypres=function(){}`
+9. prompt
+10. 缓存：localStorage：setItem，getItem，只能存储字符串
