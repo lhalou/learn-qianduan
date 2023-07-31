@@ -13,4 +13,6 @@
 1. 特性检测
 2. document.body.ontouchstart !== undefined  触屏设配（手机）
 
+### 添加动画
 
+1. `transtion: all 0.3s`
