@@ -34,3 +34,16 @@ div::after {
     }
 }
 ```
+
+
+### 绝对定位
+
+1. 绝对定位的元素会自动换行，bug修复：white-space：nowrap;
+2. 采用递归获取节点
+3. 阻止默认行为：e.preventDefault()
+4. a.href //获取的值是带http协议的
+5. a.getAttribute("href") //用户写什么，获取到什么，不带协议
+6. element.getBoundingClientReact //返回元素的大小及相对视口的位置
+7. element.offsetTop: 元素距离浏览器窗口最顶端的距离
+8. window.scrollTo(0 , element.offsetTop) // 移动到顶部
+
