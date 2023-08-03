@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.js"></script>
+
+</head>
+<body>
+    <div>TWEEN.js</div>
+    <script>
+        function animate(time) {
+            requestAnimationFrame(animate)
+            TWEEN.update(time)
+        }
+        requestAnimationFrame(animate)
+        var cords = {x: 0}
+        var tween = new TWEEN.Tween(cords)
+        .to({x: 300}, 1000)
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .onUpdate(function(){
+            console.log(cords.x)
+        }).start()
+        console.log(TWEEN,'EREW')
+    </script>
+</body>
+</html>
