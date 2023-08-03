@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.js"></script>
-
+    <style>
+        .box {
+        height: 100px;
+        border: 1px solid red;
+        background: blue;}
+    </style>
 </head>
 <body>
-    <div>TWEEN.js</div>
+    <div class="box" id="box">TWEEN.js</div>
     <script>
+        const ele = document.getElementById("box")
         function animate(time) {
             requestAnimationFrame(animate)
             TWEEN.update(time)
@@ -19,6 +25,7 @@
         .to({x: 300}, 1000)
         .easing(TWEEN.Easing.Quadratic.Out)
         .onUpdate(function(){
+            ele.style.width=`${cords.x}px`
             console.log(cords.x)
         }).start()
         console.log(TWEEN,'EREW')
