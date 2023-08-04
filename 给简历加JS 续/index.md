@@ -8,3 +8,4 @@
 ### 选择器 找元素
 
 1. `document.querySelectorAll('[data-x]')`
+2. 
