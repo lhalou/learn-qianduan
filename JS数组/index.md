@@ -19,3 +19,8 @@
 
 1. `var f = function(a,b) {return a + b}`
 2. `var f = new Function("a","b","return a+b") ` // 不加new 也是可以的
+
+### function 关键字 VS Function函数对象
+
+1. function 关键字，声明一个函数
+2. Function构造函数，也可以声明一个函数
