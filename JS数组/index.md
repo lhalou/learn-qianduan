@@ -24,3 +24,53 @@
 
 1. function 关键字，声明一个函数
 2. Function构造函数，也可以声明一个函数
+
+
+### 什么是数组
+
+1. 数组是按次序排列的一组值
+2. 数组和对象都是对象，只是原型链不同的对象
+3. for循环无法遍历出数组中不是数字的key的项
+4. for。。in循环可以
+```
+var a = [1,2,3]
+a.xx = "aa"
+a.yy = "bb"
+console.log(a)
+console.log(a.length) //3
+//访问不到非数组项
+for(let i = 0; i< a.length; i++) {
+    console.log(i, a[i])
+}
+//可以访问到非数字项
+for(let key in a) {
+    console.log("key", key, a[key])
+}
+```
+5. 具有length属性，但是原型链中没有Array.prototype，就是伪数组
+6. arguments是伪数组，是函数内置的变量
+```
+function f(){
+    console.log(arguments,'arguments')
+}
+f(1,2,3)
+```
+
+### 数组的api ：链式操作
+
+1. forEach ：接受一个函数，函数必须接受2个数，没有返回值
+```
+var a = [1,2,3]
+a.forEach((x,y) => {
+    console.log(x,'x')
+    console.log(y,'y')
+})
+```
+2. forEach循环等价于for循环
+3. sort
+4. join
+5. concat： 会返回一个新的数组
+6. map: 会返回值
+7. filter：过滤数组
+8. reduce
+9. 
