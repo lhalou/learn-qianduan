@@ -15,18 +15,31 @@
     <li id = "item6">item6</li>
 </ul>
 <script>
-    //获取一个节点的所有兄弟节点
+    // //获取一个节点的所有兄弟节点
     const elemt = document.getElementById("item3")
-    var childrenList = elemt.parentNode.children
-    var arr = {length: 0}
-    for(let i = 0; i < childrenList?.length;  i++) {
-        console.log(childrenList[i],'childrenList[i]')
-        if(childrenList[i]?.id !== "item3") {
-            arr[arr.length] = childrenList[i]
-            arr.length  += 1
+    // var childrenList = elemt.parentNode.children
+    // var arr = {length: 0}
+    // for(let i = 0; i < childrenList?.length;  i++) {
+    //     console.log(childrenList[i],'childrenList[i]')
+    //     if(childrenList[i]?.id !== "item3") {
+    //         arr[arr.length] = childrenList[i]
+    //         arr.length  += 1
+    //     }
+    // }
+    //
+    function getSiblings(node) {
+        var childrenList = node.parentNode.children
+        var arr = {length: 0}
+        for(let i = 0; i < childrenList?.length;  i++) {
+            console.log(childrenList[i],'childrenList[i]')
+            if(childrenList[i]?.id !== "item3") {
+                arr[arr.length] = childrenList[i]
+                arr.length  += 1
+            }
         }
+        return arr;
     }
-    console.log(arr,'arr')
+    console.log(getSiblings(elemt))
 </script>
 </body>
 </html>
