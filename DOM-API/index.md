@@ -12,3 +12,10 @@
 10. nodeType MDN
 11. DocumentFragment ：重点学习，可以进行性能优化
 12. innerText 和 contentText  文本节点
+
+
+### Document接口
+
+1. 创建文本节点：document.createTextNode()
+2. document.querySelect()
+3. document.querySelectAll()
