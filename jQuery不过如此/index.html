@@ -40,6 +40,21 @@
         return arr;
     }
     console.log(getSiblings(elemt))
+    //绑定this
+    Node.prototype.getSiblings = function(){
+        var childrenList = this.parentNode.children
+        var arr = {length: 0}
+        for(let i = 0; i < childrenList?.length;  i++) {
+            console.log(childrenList[i],'childrenList[i]')
+            if(childrenList[i]?.id !== this?.id) {
+                arr[arr.length] = childrenList[i]
+                arr.length  += 1
+            }
+        }
+        return arr;
+    }
+    console.log(elemt.getSiblings(),"elemt.getSiblings()")
+
 </script>
 </body>
 </html>
