@@ -32,7 +32,7 @@
         var arr = {length: 0}
         for(let i = 0; i < childrenList?.length;  i++) {
             console.log(childrenList[i],'childrenList[i]')
-            if(childrenList[i]?.id !== "item3") {
+            if(childrenList[i]?.id !== node?.id) {
                 arr[arr.length] = childrenList[i]
                 arr.length  += 1
             }
