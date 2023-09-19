@@ -95,6 +95,16 @@
     - ie6中双倍边距的问题：给float元素添加display:inline
     - 可以采用css hack，为不同的样式添加不同的css前缀
 
+### link和@import的区别
+
+1. link是XHTML标签，除了加载CSS外，还可以定义RSS,@import只能加载css
+2. link引用css时，在页面加载时同时加载，@import需要页面完全载入后加载，会出现闪屏
+3. link是XHTML标签，无兼容性问题，@import是css2.1提出的，低版本浏览器不支持
+4. link支持使用javascript控制DOM去改变样式，@import不支持
+
+
+### 对cssom的理解
+
 
    
     
