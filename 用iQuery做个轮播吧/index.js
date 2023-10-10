@@ -35,8 +35,34 @@ for(let i =0; i < childrenList?.length; i++ ) {
 }
 let n = 0
 
-setInterval(() => {
+let timeId = setInterval(() => {
     n = n+ 1
     const width = n % 3  * (-300)
     images.style.transform=`translateX(${width}px)`
+    for(let i =0; i < childrenList?.length; i++ ) {
+        childrenList[i].classList.remove("red")
+    }
+    childrenList[n % 3].classList.add("red")
+
 }, 1000)
+
+let stop = document.getElementById("stop")
+stop.onclick = () => {
+    clearInterval(timeId)
+}
+
+let open = document.getElementById("open")
+
+open.onclick=() => {
+    timeId = setInterval(() => {
+        n = n+ 1
+        const width = n % 3  * (-300)
+        images.style.transform=`translateX(${width}px)`
+        for(let i =0; i < childrenList?.length; i++ ) {
+            childrenList[i].classList.remove("red")
+        }
+        childrenList[n % 3].classList.add("red")
+
+    }, 1000)
+
+}

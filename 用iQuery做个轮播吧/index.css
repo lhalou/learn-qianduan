@@ -30,3 +30,9 @@ body {
 .pageThree {
     transform: translateX(-600px);
 }
+.red {
+    border: 1px solid red;
+}
+.stop {
+    margin-top: 24px;
+}
