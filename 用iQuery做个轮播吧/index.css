@@ -19,3 +19,14 @@ body {
 .operator {
     margin-top: 12px;
 }
+/**内容样式行为分离 **/
+
+.pageOne {
+    transform: translateX(0);
+}
+.pageTwo {
+    transform: translateX(-300px);
+}
+.pageThree {
+    transform: translateX(-600px);
+}

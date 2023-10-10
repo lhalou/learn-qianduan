@@ -4,11 +4,18 @@ const button2 = document.getElementById("pageTwo");
 const button3 = document.getElementById("pageThree");
 const images = document.getElementsByClassName("images")[0]
 button1.onclick = function() {
-    images.style.transform = "translateX(0)"
+    images.classList.remove("pageTwo")
+    images.classList.remove("pageThree")
+    images.classList.add("pageOne")
 }
 button2.onclick = function() {
-    images.style.transform = "translateX(-300px)"
+    //需要移除上面的class
+    images.classList.remove("pageOne")
+    images.classList.remove("pageThree")
+    images.classList.add("pageTwo")
 }
 button3.onclick = function() {
-    images.style.transform = "translateX(-600px)"
+    images.classList.remove("pageOne")
+    images.classList.remove("pageTwo")
+    images.classList.add("pageThree")
 }
