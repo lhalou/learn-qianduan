@@ -25,12 +25,18 @@ const childrenList = parentNode.children
 for(let i =0; i < childrenList?.length; i++ ) {
     const width = i * (-300)
     console.log(width,'width')
-    childrenList[i].addEventListener("click", function() {
-        images.style.transform=`translateX(${width}px)`
-    })
-    // childrenList[i].onClick=function() {
-    //     console.log('2324')
+    // childrenList[i].addEventListener("click", function() {
     //     images.style.transform=`translateX(${width}px)`
-    // }
-    console.log(childrenList[i], 'childrenList')
+    // })
+    childrenList[i].onclick=function() {
+        console.log('2324')
+        images.style.transform=`translateX(${width}px)`
+    }
 }
+let n = 0
+
+setInterval(() => {
+    n = n+ 1
+    const width = n % 3  * (-300)
+    images.style.transform=`translateX(${width}px)`
+}, 1000)
