@@ -10,6 +10,7 @@ button.addEventListener("click", function(e) {
 })
 wrapper.addEventListener("click", function(e) {
     //只要阻止向上冒泡，就不会执行document.onclick
+    e.preventDefault() //阻止默认事件会导致 checkbox 无法选中
     e.stopPropagation()//阻止事件冒泡
 })
 document.addEventListener("click", function() {
