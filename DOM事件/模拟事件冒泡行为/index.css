@@ -1,0 +1,30 @@
+div {
+    border-radius: 50%;
+    padding: 20px;
+    display: inline-block;
+}
+.red.active {
+    background: red;
+}
+.orange.active {
+    background: orange;
+}
+.yellow.active {
+    background: yellow;
+}
+.green.active {
+    background: green;
+}
+.slateblue.active {
+    background: slateblue;
+}
+.darkslategray.active {
+    background: darkslategray;
+}
+.darkslategray {
+    width: 200px;
+    height: 200px;
+}
+div {
+    border: 1px solid gray;
+}
