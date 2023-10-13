@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid sandybrown;
+}
+.wrapper {
+    border: 1px solid red;
+    display: inline-block;
+    position: relative;
+
+}
+.popover {
+    border: 1px solid green;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    white-space: nowrap;
+    margin-left: 10px;
+    display: none;
+}
+.popover:before {
+    content: "";
+    border-right: 10px solid green;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
