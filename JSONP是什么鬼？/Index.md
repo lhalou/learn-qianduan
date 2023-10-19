@@ -33,4 +33,8 @@ script.onerror = function(){
     //表示失败
 }
 reponse.setHeader("Content-Type","application/javascript")
+//服务器返回一个在浏览器执行的代码
+response.write("alert("success")")
+//每次执行一次document.appendChild就会在DOM结构中插入一个script标签
+e.currentTarget.remove()
 ```
