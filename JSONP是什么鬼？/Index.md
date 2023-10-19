@@ -18,3 +18,19 @@ image.onerror = function(){
 statusCode //状态码
 widnow.location.reload() //刷新页面
 ```
+5. script 发送请求 ,不用返回图片，请求快，但是script会执行
+```
+const script = document.createElement("script")
+script.src = "/pay"
+//由于scipr他会执行，那么就不需要监听onload
+document.appendChild(script)
+    //表示成功
+}
+script.onload = function(){
+    //表示成功
+}
+script.onerror = function(){
+    //表示失败
+}
+reponse.setHeader("Content-Type","application/javascript")
+```
