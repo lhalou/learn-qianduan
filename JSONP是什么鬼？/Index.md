@@ -38,3 +38,20 @@ response.write("alert("success")")
 //每次执行一次document.appendChild就会在DOM结构中插入一个script标签
 e.currentTarget.remove()
 ```
+6. **script不受域名限制**
+7. 先有JSONP 再有 axios
+8. callback
+9. 不同的端口也属于不同的网站
+10. 耦合不好，需要解耦
+11. script标签不受同源策略的限制，所以可以实现两个网站之间的交流
+12. axios受同源策略限制
+
+### 什么是JSONP
+
+1. 请求方创建script,scr指向响应方，同时传一个查询参数?callback=xxx,
+2. 响应方根据查询参数callback构造形如：
+    - xxx.call(undefined,"数据")
+    - xxx("数据")
+3. 浏览器接收到响应，就会执行xxx("数据")
+4. 那么请求方就知道了他要的数据
+5. JSONP为什么不支持post请求：因为script的src只能写入URl,可以写入get数据，没办法写post数据
